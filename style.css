@@ -76,7 +76,7 @@ h1 {
 .progr-icons {
   display: flex;
   justify-content: space-between;
-  
+  flex-wrap: wrap;
 }
 
 .proj {
