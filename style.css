@@ -1,0 +1,205 @@
+.gradient-background {
+    background: linear-gradient(300deg, #ff6ba9, #db88ff, #8972ef);
+    background-size: 180% 180%;
+    animation: gradient-animation 8s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+html {
+    height: 100%;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enable vertical snapping */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+h1 { 
+  color: #fff3a3;
+}
+
+.progr {
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: 100px;
+  font-weight: 100px;
+  font-style: normal;
+}
+
+.star-img {
+    height: 30px;
+}
+
+#profile {
+  margin: 0px;
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "me .";
+}
+
+.educ {
+  grid-area: educ;
+  border: 10px double rgb(186, 157, 255);
+  border-radius: 30px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: auto;
+  text-align: justify;
+  font-size: large;
+}
+
+.progr-icons {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.proj {
+  margin-top: 20px;
+  grid-area: proj;
+  border: 10px double rgb(186, 157, 255);
+  border-radius: 30px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: auto;
+  text-align: justify;
+}
+
+.cont {
+  margin-top: 20px;
+  grid-area: cont;
+  border: 10px double rgb(186, 157, 255);
+  border-radius: 30px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: auto;
+  text-align: justify;
+}
+
+.me {
+  height: 200px;
+  max-width: 100%;
+  margin-top: 20px;
+  border: #8972ef dashed 2px;
+  padding: 3px;
+  border-radius: 50%;
+  grid-area: me;
+  display: block; /* Ensure the image is treated as a block-level element */
+  /* margin-left: auto; Center the image horizontally */
+  /* margin-right: auto; Center the image horizontally */
+}
+
+.tired-me {
+  display: block;
+  height: 200px;
+  width: 223px;
+  margin-top: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  grid-area: me;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tired-me:hover {
+  opacity: 1;
+}
+
+.hello {
+  margin-top: 30px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: 100px;
+  font-weight: 100px;
+  font-style: normal;
+  text-align: center;
+  grid-area: hello;
+  text-decoration: underline dotted #8972ef;
+  text-underline-offset: 0.3em;
+}
+
+.profile-paragraph {
+  margin-top: 30px;
+  grid-area: profile-paragraph;
+  text-align: justify;
+  font-size: large;
+  margin-bottom: 0;
+}
+
+.info-title {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: 100px;
+  font-weight: 100px;
+  font-style: normal;
+  text-decoration: underline dotted #8972ef;
+  text-underline-offset: 0.3em;
+}
+
+.info-text {
+  margin-top: 30px;
+}
+
+.about-me, .info {
+  margin: 70px;
+}
+
+.about-me {
+  border: 10px double rgb(186, 157, 255);
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: auto;
+  background-color: white;
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */ 
+}
+
+.custom-link {
+  color: inherit; /* Inherit color from the parent element */
+  text-decoration: none; /* Remove underline */
+  font-weight: normal; /* Make the text bold */
+}
+
+/* Add a hover effect */
+.custom-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #8972ef; /* Change to LinkedIn blue or any color you prefer */
+}
+
+.bi-linkedin, .bi-envelope-at, .bi-github {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 995px) {
+  #profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
